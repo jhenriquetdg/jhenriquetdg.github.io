@@ -11,7 +11,7 @@ function App() {
     <>
       <section className="flex flex-col items-center bg-zinc-800 ">
         <div className="h-[50vh] w-[100%] flex justify-center bg-zinc-900 outline outline-1" id="particles-js">
-          <h1 className="m-[10vh] text-orange-600 text-3xl">Welcome</h1>
+          <h1 className="m-[10px] text-orange-600 text-3xl">Welcome</h1>
         </div>
         <div className="w-[90%] bg-zinc-400 h-[100vh] m-[-30vh]">
 
