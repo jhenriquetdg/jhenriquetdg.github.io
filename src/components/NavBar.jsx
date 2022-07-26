@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 export default function NavBar(){
     return (
         <div className="bg-zinc-600 outline outline-1 shadow-lg h-[3rem] flex flex-row justify-between items-center sticky">
-            <h1 className="font-6xl m-5 text-orange-300 overflow-visible">
+            <h1 className="font-6xl m-5 text-orange-300">
                 <Link to="/#">
                     José Gois
                 </Link>
