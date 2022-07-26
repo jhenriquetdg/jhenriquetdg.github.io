@@ -17,13 +17,12 @@ function Home() {
               <p className="text-orange-300">Web developer</p>
             </div>
           </div>
-          <div className="h-[255px] w-[255px] rounded-[50%] border-8 bg-gray-500">
-            <img
-              src="https://github.com/jhenriquetdg.png"
-              alt=""
-              className="rounded-[50%]"
-            />
-          </div>
+
+          <img
+            src="https://github.com/jhenriquetdg.png"
+            alt=""
+            className="rounded-[50%] border-8"
+          />
         </div>
       </section>
     </>
