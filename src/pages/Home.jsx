@@ -1,15 +1,16 @@
 import { useState } from "react";
 import logo from "../assets/logo.svg";
 import "../styles/Home.css";
-import Primeiro from "../components/Primeiro";
+
+import CanvasWrap from "../components/Smoke";
 
 function Home() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <section className="flex flex-col items-center bg-zinc-800 ">
-        <div className="flex flex-row h-[20rem] w-[100%] justify-between p-8 bg-zinc-900 outline outline-1">
+      <section className="flex z-10 flex-col items-center bg-transparent ">
+        <div className="flex z-10 flex-row h-[20rem] w-[100%] justify-between p-8 bg-transparent outline outline-1">
           <div className="flex flex-col justify-between p4y-10">
             <h1 className="text-orange-600 text-3xl">Welcome</h1>
             <div>
@@ -23,6 +24,9 @@ function Home() {
             alt=""
             className="rounded-[50%] border-8"
           />
+        </div>
+        <div className="absolute top-[3rem] z-0 h-[20rem] w-full flex justify-center items-center">
+          <CanvasWrap></CanvasWrap>
         </div>
       </section>
     </>
