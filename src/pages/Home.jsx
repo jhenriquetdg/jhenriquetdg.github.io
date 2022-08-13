@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../assets/logo.svg";
 import "../styles/Home.css";
 
 import CanvasWrap from "../components/Smoke";
