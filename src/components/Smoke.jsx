@@ -3,6 +3,11 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Object3D } from "three";
 import { useTexture } from "@react-three/drei";
 
+let color;
+color = "#ffa500";
+color = "#ffa5ff";
+const color2 = "black";
+
 function Smoke() {
   const tempObject = useMemo(() => new Object3D(), []);
   const ref = useRef();
@@ -55,11 +60,11 @@ function CanvasWrap() {
   return (
     <>
       <Canvas
-        onCreated={(state) => state.gl.setClearColor("black")}
+        onCreated={(state) => state.gl.setClearColor(color2)}
         camera={{ fov: 105, position: [0, 0, 300], far: 6000 }}
       >
         <directionalLight
-          color="#ffa500"
+          color={color}
           intensity={0.25}
           position={[-1, 0, 1]}
         />

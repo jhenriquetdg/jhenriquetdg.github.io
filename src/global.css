@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg-color: rgba(241, 241, 241, 0.2);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.curriculum {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.curriculum h1 {
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 1rem;
+}
+
+.curriculum > div,
+.curriculum > div > div {
+  margin-bottom: 1rem;
+  background-color: rgba(254, 214, 214, 0.1);
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.curriculum div h2 {
+  font-weight: bold;
+}
+
+.social > li {
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgba(254, 214, 214, 0.1);
+  background-color: rgba(254, 214, 214, 0.1);
+}
+
+.social > li:hover {
+  animation: glow infinite alternate-reverse 0.4s ease-in-out;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 15px rgba(254, 214, 214, 0.1);
+  }
+  to {
+    box-shadow: 0px 0px 20px rgba(254, 214, 214, 0.4);
+  }
+}
