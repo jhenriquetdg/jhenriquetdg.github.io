@@ -1,12 +1,7 @@
-import React, { Suspense, useRef, useMemo } from "react";
+import React, { Suspense, useRef, useMemo, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Object3D } from "three";
 import { useTexture } from "@react-three/drei";
-
-let color;
-color = "#ffa500";
-color = "#ffa5ff";
-const color2 = "black";
 
 function Smoke() {
   const tempObject = useMemo(() => new Object3D(), []);
@@ -57,6 +52,23 @@ function Smoke() {
 }
 
 function CanvasWrap() {
+  var color;
+  var color2;
+  var colorCount = 0x0;
+  var colorInc = 1;
+  color = "#ffa5ff";
+  color2 = "#000000";
+
+  setTimeout(() => {
+    colorCount += colorInc;
+    if (colorCount == 0xffffff) {
+      colorInc = -1;
+    } else if (colorCount == 0x0) {
+      colorInc = 1;
+    }
+    color = "#" + colorCount;
+  }, 150);
+
   return (
     <>
       <Canvas
