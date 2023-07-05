@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useMemo, useState } from "react";
+import React, { Suspense, useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Object3D } from "three";
 import { useTexture } from "@react-three/drei";
@@ -52,31 +52,14 @@ function Smoke() {
 }
 
 function CanvasWrap() {
-  var color;
-  var color2;
-  var colorCount = 0x0;
-  var colorInc = 1;
-  color = "#ffa5ff";
-  color2 = "#000000";
-
-  setTimeout(() => {
-    colorCount += colorInc;
-    if (colorCount == 0xffffff) {
-      colorInc = -1;
-    } else if (colorCount == 0x0) {
-      colorInc = 1;
-    }
-    color = "#" + colorCount;
-  }, 150);
-
   return (
     <>
       <Canvas
-        onCreated={(state) => state.gl.setClearColor(color2)}
+        onCreated={(state) => state.gl.setClearColor("black")}
         camera={{ fov: 105, position: [0, 0, 300], far: 6000 }}
       >
         <directionalLight
-          color={color}
+          color="#ffa500"
           intensity={0.25}
           position={[-1, 0, 1]}
         />
